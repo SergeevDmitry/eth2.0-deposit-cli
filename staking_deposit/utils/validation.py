@@ -141,7 +141,7 @@ def validate_node_deposit_amount(amount: Any) -> int:
         # trust node mode
         return 1
     amount = int(amount)
-    if 1 <= amount <= 31:
+    if 1 <= amount <= 19999:
         return amount
     raise ValidationError(load_text(['err_not_valid_amount']))
 
